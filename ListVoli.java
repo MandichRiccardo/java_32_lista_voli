@@ -23,7 +23,7 @@ public class ListVoli{
         size++;
     }
 
-    protected void addNextNode(NodeVolo current, NodeVolo n){
+    private void addNextNode(NodeVolo current, NodeVolo n){
         if(current.getNext() != null) addNextNode(current.getNext(), n);
         else current.setNext(n);
     }
@@ -39,7 +39,7 @@ public class ListVoli{
         }
     }
 
-    protected void removeNextNode(NodeVolo current, NodeVolo n){
+    private void removeNextNode(NodeVolo current, NodeVolo n){
         if(current.getNext().equals(n)) current.setNext(current.getNext().getNext());
         else removeNextNode(current.getNext(), n);
     }
@@ -75,7 +75,7 @@ public class ListVoli{
         }
     }
 
-    public void orderNext(NodeVolo n){
+    private void orderNext(NodeVolo n){
         if(n.getNext() != null && n.getNext().getNext() != null) {
             if (n.getNext().compareTo(n.getNext().getNext()) > 0) {
                 NodeVolo start = n.getNext();
@@ -87,7 +87,7 @@ public class ListVoli{
         }
     }
 
-    public boolean ordered(NodeVolo n){
+    private boolean ordered(NodeVolo n){
         if(n.getNext() != null){
             if(!(n.compareTo(n.getNext()) > 0)) return ordered(n.getNext());
             else return false;

@@ -33,4 +33,19 @@ public class NodeVolo {
             return value + "\n";
         }
     }
+
+    public String toString(){
+        String info ="";
+        info += "\t\tvalore:\n" + value + "\n";
+        try{
+            info += "\tsuccessivo:\n" + next.toString();
+        }catch (NullPointerException e){
+            info += "\tlista terminata\n";
+        }
+        return info;
+    }
+
+    public boolean equals(NodeVolo node){
+        return value.equals(node.value);
+    }
 }

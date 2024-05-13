@@ -47,10 +47,10 @@ public class ListPasseggeri{
 
     public String toString(){
         String info = "";
-        info += "size:\t" + size + "\n";
-        info += "\tlista iniziata\n";
-        if(start != null) info += "\tstart:\n" + start + "\n";
-        else info += "\tlista terminata\n";
+        info += "\t\t\tsize:\t" + size + "\n";
+        info += "\t\t\t\tlista iniziata\n";
+        if(start != null) info += "\t\t\t\tstart:\n" + start + "\n";
+        else info += "\t\t\t\tlista terminata\n";
         return info;
     }
 

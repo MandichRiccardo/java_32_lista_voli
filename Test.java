@@ -23,6 +23,10 @@ public class Test{
                 listaVoli.removeNode(new NodeVolo());
                 return creazioneListaVoli(listaVoli);
             }
+            case 3 -> {
+                listaVoli.order();
+                return creazioneListaVoli(listaVoli);
+            }
         }
     }
 }
