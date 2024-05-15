@@ -14,14 +14,19 @@ public class ListPasseggeri{
     }
 
     public void addFirstNode(NodePasseggero n){
-        n.setNext(this.start);
-        this.start = n;
+        if(max != size){
+            n.setNext(this.start);
+            this.start = n;
+            size++;
+        }else System.out.println("l'aereo è pieno");
     }
 
     public void addNode(NodePasseggero n){
-        if (start != null) addNextNode(start, n);
-        else start = n;
-        size++;
+        if(max != size){
+            if (start != null) addNextNode(start, n);
+            else start = n;
+            size++;
+        }else System.out.println("l'aereo è pieno");
     }
 
     protected void addNextNode(NodePasseggero current, NodePasseggero n){

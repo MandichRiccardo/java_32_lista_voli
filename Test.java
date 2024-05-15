@@ -7,10 +7,10 @@ public class Test{
         System.out.println("stato attuale della lista:\n" + listaVoli);
         System.out.println("""
                 cosa vuoi fare?
-                    0) terminare questa fase del programma
-                    1)aggiungere un nuovo volo alla lista
-                    2)rimuovere un volo dalla lista
-                    3)ordinare la lista\t(verrà fatto sulla base del numero del volo""");
+                    0)\tterminare questa fase del programma
+                    1)\taggiungere un nuovo volo alla lista
+                    2)\trimuovere un volo dalla lista
+                    3)\tordinare la lista\t(verrà fatto sulla base del numero del volo)""");
         switch (Passeggero.getInt()){
             default -> {
                 return listaVoli;
