@@ -33,4 +33,9 @@ public class NodePasseggero {
             return value + "\n";
         }
     }
+
+    @Override
+    public String toString(){
+        return "\t\t\t\t\t" + value + "\n\t\t\t\t\t" + next;
+    }
 }

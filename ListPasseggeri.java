@@ -5,7 +5,13 @@ public class ListPasseggeri{
 
     public ListPasseggeri(){
         size = 0;
+        System.out.println("inserisci la capienza (posti massimi) di questo volo");
+        max = Passeggero.getInt();
         start = null;
+        do{
+            addNode(new NodePasseggero());
+            System.out.println("vuoi aggiungere un'altro passeggero?");
+        }while(Passeggero.getBoolean());
     }
     public ListPasseggeri(String[] list){
         for(String node:list){
@@ -53,9 +59,9 @@ public class ListPasseggeri{
     public String toString(){
         String info = "";
         info += "\t\t\tsize:\t" + size + "\n";
-        info += "\t\t\t\tlista iniziata\n";
+        info += "\t\t\t\tlista passeggeri iniziata\n";
         if(start != null) info += "\t\t\t\tstart:\n" + start + "\n";
-        else info += "\t\t\t\tlista terminata\n";
+        else info += "\t\t\t\tlista passeggeri terminata\n";
         return info;
     }
 

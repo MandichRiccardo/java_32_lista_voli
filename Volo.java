@@ -1,12 +1,12 @@
 public class Volo {
+    private static int progressivoVoli;
     private int numeroVolo;
     private String partenza;
     private String destinazione;
     private ListPasseggeri passeggeri;
 
     public Volo(){
-        System.out.println("inserisci il numero di questo volo");
-        numeroVolo = Passeggero.getInt();
+        numeroVolo = progressivoVoli++;
         System.out.println("inserisci la partenza");
         partenza = Passeggero.getString();
         System.out.println("inserisci la destinazione");
